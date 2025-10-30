@@ -1,3 +1,4 @@
+// components/hero-canvas.tsx
 "use client"
 import { useRef, useEffect, useState } from "react"
 
@@ -27,7 +28,7 @@ export default function HeroCanvas() {
       if (!ctx || !canvas) return 0
       ctx.fillStyle = "white"
       ctx.save()
-      const fontSize = isMobile ? 80 : 160
+      const fontSize = isMobile ? canvas.width * 0.25 : canvas.width * 0.35
       ctx.font = `bold ${fontSize}px Space Grotesk, sans-serif`
       ctx.textAlign = "center"
       ctx.textBaseline = "middle"
@@ -133,7 +134,7 @@ export default function HeroCanvas() {
       <canvas ref={canvasRef} className="w-full h-full absolute top-0 left-0 touch-none" crossOrigin="anonymous" />
       <div className="absolute bottom-[100px] text-center z-10">
         <p className="font-mono text-gray-400 text-xs sm:text-base md:text-sm">
-          Welcome to <span className="text-purple-500 font-semibold">CULT</span>
+          Welcome to <span className="text-white font-semibold">CULT</span>
         </p>
       </div>
     </div>

@@ -6,77 +6,120 @@ export default function Services() {
     <main className="bg-black">
       <Navigation />
 
-      <section className="pt-32 pb-24 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-4xl mx-auto">
-          <h1 className="text-5xl md:text-6xl font-black mb-8 text-white uppercase">WHAT WE DO</h1>
-          <p className="text-xl text-gray-300 mb-16">
+      <section className="pt-40 pb-32 px-4 sm:px-6 lg:px-8 min-h-screen flex items-center">
+        <div className="max-w-4xl mx-auto w-full">
+          <h1 className="text-6xl md:text-7xl font-black mb-12 text-white uppercase">WHAT WE DO</h1>
+          <p className="text-2xl md:text-3xl text-gray-300 leading-relaxed">
             We collaborate with startups, creatives, and small organizations to bring ideas to life with elegance and
-            accuracy.
+            accuracy. Our approach combines strategic thinking, meticulous design, and precise development to create
+            digital experiences that resonate and endure.
           </p>
         </div>
       </section>
 
-      <section className="py-24 px-4 sm:px-6 lg:px-8 border-t border-white/10">
+      <section className="py-32 px-4 sm:px-6 lg:px-8 border-t border-white/10">
         <div className="max-w-6xl mx-auto">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
-            <div>
-              <h2 className="text-3xl font-black mb-8 text-white uppercase">DESIGN & UX ADVISORY</h2>
-              <ul className="space-y-4 text-gray-300">
-                <li className="flex gap-3">
-                  <span className="text-white font-bold">→</span>
-                  <span>Branding & Visual Identity</span>
-                </li>
-                <li className="flex gap-3">
-                  <span className="text-white font-bold">→</span>
-                  <span>UI/UX Design Systems</span>
-                </li>
-                <li className="flex gap-3">
-                  <span className="text-white font-bold">→</span>
-                  <span>Layout Optimization</span>
-                </li>
-                <li className="flex gap-3">
-                  <span className="text-white font-bold">→</span>
-                  <span>Creative Direction</span>
-                </li>
-                <li className="flex gap-3">
-                  <span className="text-white font-bold">→</span>
-                  <span>User Research & Testing</span>
-                </li>
-              </ul>
-            </div>
-            <div>
-              <h2 className="text-3xl font-black mb-8 text-white uppercase">DEVELOPMENT</h2>
-              <ul className="space-y-4 text-gray-300">
-                <li className="flex gap-3">
-                  <span className="text-white font-bold">→</span>
-                  <span>Custom Websites & Web Apps</span>
-                </li>
-                <li className="flex gap-3">
-                  <span className="text-white font-bold">→</span>
-                  <span>E-commerce Solutions</span>
-                </li>
-                <li className="flex gap-3">
-                  <span className="text-white font-bold">→</span>
-                  <span>Interactive Experiences</span>
-                </li>
-                <li className="flex gap-3">
-                  <span className="text-white font-bold">→</span>
-                  <span>Performance Optimization</span>
-                </li>
-                <li className="flex gap-3">
-                  <span className="text-white font-bold">→</span>
-                  <span>API Integration & Backend</span>
-                </li>
-              </ul>
-            </div>
+          <div className="space-y-8">
+            {[
+              {
+                title: "DESIGN & UX ADVISORY",
+                items: [
+                  {
+                    name: "Branding & Visual Identity",
+                    description: "Crafting distinctive visual languages that define your brand.",
+                  },
+                  {
+                    name: "UI/UX Design Systems",
+                    description: "Building scalable, consistent design systems for seamless experiences.",
+                  },
+                  {
+                    name: "Layout Optimization",
+                    description: "Maximizing usability and visual hierarchy for optimal engagement.",
+                  },
+                  {
+                    name: "Creative Direction",
+                    description: "Guiding visual and conceptual direction across all touchpoints.",
+                  },
+                  {
+                    name: "User Research & Testing",
+                    description: "Data-driven insights to validate and refine design decisions.",
+                  },
+                ],
+              },
+              {
+                title: "DEVELOPMENT",
+                items: [
+                  {
+                    name: "Custom Websites & Web Apps",
+                    description: "Bespoke digital solutions tailored to your unique requirements.",
+                  },
+                  {
+                    name: "E-commerce Solutions",
+                    description: "Powerful platforms designed to convert and delight customers.",
+                  },
+                  {
+                    name: "Interactive Experiences",
+                    description: "Engaging, dynamic interfaces that captivate and inspire.",
+                  },
+                  {
+                    name: "Performance Optimization",
+                    description: "Lightning-fast load times and smooth interactions across all devices.",
+                  },
+                  {
+                    name: "API Integration & Backend",
+                    description: "Robust backend systems and seamless third-party integrations.",
+                  },
+                ],
+              },
+              {
+                title: "STRATEGY",
+                items: [
+                  {
+                    name: "Digital Strategy",
+                    description: "Comprehensive roadmaps that align technology with business goals.",
+                  },
+                  {
+                    name: "Market Research",
+                    description: "Deep insights into your audience and competitive landscape.",
+                  },
+                  {
+                    name: "Product Planning",
+                    description: "Strategic vision and execution plans for digital products.",
+                  },
+                  {
+                    name: "Growth Optimization",
+                    description: "Data-driven strategies to scale and improve your digital presence.",
+                  },
+                  {
+                    name: "Consulting",
+                    description: "Expert guidance on technology choices and digital transformation.",
+                  },
+                ],
+              },
+            ].map((service, index) => (
+              <div key={index} className="glow-border p-12 rounded-lg">
+                <h2 className="text-3xl font-black mb-8 text-white uppercase">{service.title}</h2>
+                <div className="space-y-6">
+                  {service.items.map((item, itemIndex) => (
+                    <div key={itemIndex} className="flex gap-4">
+                      <span className="text-white font-bold text-xl flex-shrink-0">→</span>
+                      <div>
+                        <span className="text-lg font-semibold text-white">{item.name}</span>
+                        <p className="text-gray-400 text-sm mt-1">{item.description}</p>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       </section>
 
-      <section className="py-24 px-4 sm:px-6 lg:px-8">
+      <section className="py-32 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl font-black mb-8 text-white uppercase">OUR APPROACH</h2>
-          <p className="text-lg text-gray-400 leading-relaxed">
+          <h2 className="text-4xl font-black mb-12 text-white uppercase">OUR APPROACH</h2>
+          <p className="text-xl md:text-2xl text-gray-300 leading-relaxed">
             We don't just build websites—we craft digital rituals. Every project begins with deep understanding of your
             vision, followed by strategic planning, meticulous design, and precise development. We believe in
             collaboration, transparency, and delivering work that exceeds expectations.

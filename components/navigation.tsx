@@ -10,7 +10,7 @@ export default function Navigation() {
     { href: "/about", label: "About" },
     { href: "/services", label: "Services" },
     { href: "/process", label: "Process" },
-    { href: "/team", label: "Team" },
+    { href: "/contact", label: "Contact" },
   ]
 
   return (
