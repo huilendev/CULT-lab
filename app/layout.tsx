@@ -10,7 +10,7 @@ const jetbrainsMono = JetBrains_Mono({ subsets: ["latin"], variable: "--font-mon
 export const metadata: Metadata = {
   title: "CULT - Digital Lab for Design, Code & Intelligence",
   description: "A New York-based creative digital studio blending design, code, and intelligence.",
-  generator: "",
+  generator: "v0.app",
 }
 
 export default function RootLayout({

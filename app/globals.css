@@ -1,4 +1,3 @@
-
 @import "tailwindcss";
 @import "tw-animate-css";
 
@@ -151,29 +150,6 @@
   }
 }
 
-/* Added aurora borealis animation for smooth, flowing light movement */
-@keyframes aurora-flow {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
-}
-
-@keyframes aurora-glow {
-  0%,
-  100% {
-    opacity: 0.4;
-  }
-  50% {
-    opacity: 0.7;
-  }
-}
-
 .fade-in-up {
   animation: fade-in-up 0.6s ease-out;
 }
@@ -182,33 +158,11 @@
   animation: arrow-bounce 2s ease-in-out infinite;
 }
 
-/* Aurora borealis background with animated gradient */
+/* Simplified aurora-bg - aurora animation now handled by Framer Motion component */
 .aurora-bg {
-  background: linear-gradient(
-    135deg,
-    rgba(0, 0, 0, 1) 0%,
-    rgba(88, 28, 135, 0.15) 25%,
-    rgba(59, 130, 246, 0.15) 50%,
-    rgba(139, 92, 246, 0.15) 75%,
-    rgba(0, 0, 0, 1) 100%
-  );
-  background-size: 200% 200%;
-  animation: aurora-flow 8s ease-in-out infinite;
+  background: #000000;
   position: relative;
-}
-
-.aurora-bg::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: radial-gradient(
-    ellipse at 50% 0%,
-    rgba(139, 92, 246, 0.1) 0%,
-    rgba(59, 130, 246, 0.05) 30%,
-    transparent 70%
-  );
-  animation: aurora-glow 6s ease-in-out infinite;
-  pointer-events: none;
+  overflow: hidden;
 }
 
 /* Simplified border styling - removed glow effects */

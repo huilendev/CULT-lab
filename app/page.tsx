@@ -1,4 +1,3 @@
-// app/page.tsx
 import Navigation from "@/components/navigation"
 import Footer from "@/components/footer"
 import HeroCanvas from "@/components/hero-canvas"
@@ -10,8 +9,8 @@ export default function Home() {
       <Navigation />
       <HeroCanvas />
 
-      <div className="aurora-bg">
-        <section className="relative py-32 px-4 sm:px-6 lg:px-8 bg-black/40">
+      <div className="relative">
+        <section className="relative py-32 px-4 sm:px-6 lg:px-8 bg-black z-10">
           <div className="max-w-4xl mx-auto text-center fade-in-up">
             <h2 className="text-5xl md:text-7xl font-black mb-8 text-white uppercase">
               DIGITAL LAB FOR DESIGN, CODE & INTELLIGENCE
@@ -30,7 +29,7 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="py-32 px-4 sm:px-6 lg:px-8 border-t border-white/10">
+        <section className="py-32 px-4 sm:px-6 lg:px-8 border-t border-white/10 relative z-10 bg-black">
           <div className="max-w-6xl mx-auto">
             <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
               <div className="glow-border p-12 rounded-lg">
