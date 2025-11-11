@@ -32,23 +32,30 @@ export default function Contact() {
     <main className="bg-black">
       <Navigation />
 
-      <section className="pt-40 pb-32 px-4 sm:px-6 lg:px-8 min-h-screen flex items-center">
+      <section className="pt-24 sm:pt-32 md:pt-40 pb-16 sm:pb-24 md:pb-32 px-4 sm:px-6 lg:px-8 min-h-screen flex items-center">
         <div className="max-w-2xl mx-auto w-full">
-          <h1 className="text-6xl md:text-7xl font-black mb-8 text-white uppercase">START A PROJECT</h1>
-          <p className="text-xl text-gray-300 mb-16 leading-relaxed">
+          <h1 className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-black mb-6 sm:mb-8 text-white uppercase leading-tight">
+            START A PROJECT
+          </h1>
+          <p className="text-base sm:text-lg md:text-xl text-gray-300 mb-12 sm:mb-16 leading-relaxed">
             Ready to bring your vision to life? Let's collaborate and create something extraordinary together. Fill out
             the form below and we'll get back to you within 24 hours.
           </p>
 
           {submitted && (
-            <div className="mb-8 p-6 bg-white/10 border border-white/20 rounded-lg">
-              <p className="text-white font-semibold">Thank you for reaching out! We'll be in touch soon.</p>
+            <div className="mb-8 p-4 sm:p-6 bg-white/10 border border-white/20 rounded-lg">
+              <p className="text-white font-semibold text-sm sm:text-base">
+                Thank you for reaching out! We'll be in touch soon.
+              </p>
             </div>
           )}
 
-          <form onSubmit={handleSubmit} className="space-y-8">
+          <form onSubmit={handleSubmit} className="space-y-6 sm:space-y-8">
             <div>
-              <label htmlFor="name" className="block text-white font-semibold mb-3 uppercase text-sm">
+              <label
+                htmlFor="name"
+                className="block text-white font-semibold mb-2 sm:mb-3 uppercase text-xs sm:text-sm"
+              >
                 Name
               </label>
               <input
@@ -58,13 +65,16 @@ export default function Contact() {
                 value={formData.name}
                 onChange={handleChange}
                 required
-                className="w-full px-6 py-4 bg-white/5 border border-white/20 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:border-white/50 transition-colors"
+                className="w-full px-4 sm:px-6 py-3 sm:py-4 bg-white/5 border border-white/20 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:border-white/50 transition-colors text-sm sm:text-base"
                 placeholder="Your name"
               />
             </div>
 
             <div>
-              <label htmlFor="email" className="block text-white font-semibold mb-3 uppercase text-sm">
+              <label
+                htmlFor="email"
+                className="block text-white font-semibold mb-2 sm:mb-3 uppercase text-xs sm:text-sm"
+              >
                 Email
               </label>
               <input
@@ -74,13 +84,16 @@ export default function Contact() {
                 value={formData.email}
                 onChange={handleChange}
                 required
-                className="w-full px-6 py-4 bg-white/5 border border-white/20 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:border-white/50 transition-colors"
+                className="w-full px-4 sm:px-6 py-3 sm:py-4 bg-white/5 border border-white/20 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:border-white/50 transition-colors text-sm sm:text-base"
                 placeholder="your@email.com"
               />
             </div>
 
             <div>
-              <label htmlFor="message" className="block text-white font-semibold mb-3 uppercase text-sm">
+              <label
+                htmlFor="message"
+                className="block text-white font-semibold mb-2 sm:mb-3 uppercase text-xs sm:text-sm"
+              >
                 Message
               </label>
               <textarea
@@ -90,14 +103,14 @@ export default function Contact() {
                 onChange={handleChange}
                 required
                 rows={6}
-                className="w-full px-6 py-4 bg-white/5 border border-white/20 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:border-white/50 transition-colors resize-none"
+                className="w-full px-4 sm:px-6 py-3 sm:py-4 bg-white/5 border border-white/20 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:border-white/50 transition-colors resize-none text-sm sm:text-base"
                 placeholder="Tell us about your project..."
               />
             </div>
 
             <button
               type="submit"
-              className="w-full px-8 py-4 bg-white hover:bg-gray-200 text-black font-semibold rounded-lg transition-colors uppercase font-black"
+              className="w-full px-6 sm:px-8 py-3 sm:py-4 bg-white hover:bg-gray-200 text-black font-semibold rounded-lg transition-colors uppercase font-black text-sm sm:text-base"
             >
               Send Message
             </button>

@@ -6,16 +6,20 @@ export default function Process() {
     <main className="bg-black">
       <Navigation />
 
-      <section className="pt-32 pb-24 px-4 sm:px-6 lg:px-8">
+      <section className="pt-24 sm:pt-28 md:pt-32 pb-16 sm:pb-20 md:pb-24 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto">
-          <h1 className="text-5xl md:text-6xl font-black mb-8 text-white uppercase">OUR PROCESS</h1>
-          <p className="text-xl text-gray-300">A structured approach to transforming your vision into reality.</p>
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black mb-4 sm:mb-8 text-white uppercase leading-tight">
+            OUR PROCESS
+          </h1>
+          <p className="text-base sm:text-lg text-gray-300">
+            A structured approach to transforming your vision into reality.
+          </p>
         </div>
       </section>
 
-      <section className="py-24 px-4 sm:px-6 lg:px-8 border-t border-white/10">
+      <section className="py-16 sm:py-20 md:py-24 px-4 sm:px-6 lg:px-8 border-t border-white/10">
         <div className="max-w-4xl mx-auto">
-          <div className="space-y-8">
+          <div className="space-y-6 sm:space-y-8 md:space-y-8">
             {[
               {
                 title: "Discovery",
@@ -44,14 +48,14 @@ export default function Process() {
               },
             ].map((step, index) => (
               <div key={index} className="flex flex-col">
-                <div className="glow-border p-8 rounded-lg mb-4">
-                  <h3 className="text-2xl font-black text-white mb-3 uppercase">{step.title}</h3>
-                  <p className="text-gray-400 leading-relaxed">{step.description}</p>
+                <div className="glow-border p-6 sm:p-8 md:p-8 rounded-lg mb-3 sm:mb-4">
+                  <h3 className="text-lg sm:text-2xl font-black text-white mb-2 sm:mb-3 uppercase">{step.title}</h3>
+                  <p className="text-gray-400 text-sm sm:text-base leading-relaxed">{step.description}</p>
                 </div>
                 {index < 4 && (
-                  <div className="flex justify-center py-2">
+                  <div className="flex justify-center py-2 sm:py-3">
                     <svg
-                      className="w-6 h-6 text-white arrow-bounce"
+                      className="w-5 h-5 sm:w-6 sm:h-6 text-white arrow-bounce"
                       fill="none"
                       stroke="currentColor"
                       viewBox="0 0 24 24"

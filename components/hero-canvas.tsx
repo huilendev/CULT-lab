@@ -131,8 +131,8 @@ export default function HeroCanvas() {
   return (
     <div className="relative w-full h-dvh flex flex-col items-center justify-center bg-black">
       <canvas ref={canvasRef} className="w-full h-full absolute top-0 left-0 touch-none" crossOrigin="anonymous" />
-      <div className="absolute bottom-[100px] text-center z-10">
-        <p className="font-mono text-gray-400 text-xs sm:text-base md:text-sm">
+      <div className="absolute bottom-12 sm:bottom-16 md:bottom-24 text-center z-10 px-4">
+        <p className="font-mono text-gray-400 text-xs sm:text-sm md:text-base">
           Welcome to <span className="text-white font-semibold">CULT</span>
         </p>
       </div>
